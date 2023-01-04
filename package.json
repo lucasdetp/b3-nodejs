@@ -1,5 +1,5 @@
 {
-  "name": "b3-nodejs",
+  "name": "lucasdetp-b3-nodejs",
   "version": "1.0.1",
   "description": "Lorem ipsum dolor sit amet",
   "main": "src/server.ts",
