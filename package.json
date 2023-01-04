@@ -1,6 +1,6 @@
 {
   "name": "lucasdetp-b3-nodejs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lorem ipsum dolor sit amet",
   "main": "src/server.ts",
   "repository": "https://github.com/lucasdetp/b3-nodejs",
