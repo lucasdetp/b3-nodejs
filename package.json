@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lorem ipsum dolor sit amet",
   "main": "src/server.ts",
+  "repository": "https://github.com/lucasdetp/b3-nodejs",
   "scripts": {
     "start": "ts-node --esm --experimental-specifier-resolution=node src/server.ts",
     "test": "jest"
