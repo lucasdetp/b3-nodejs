@@ -1,12 +1,12 @@
 import bodyParser from "body-parser";
 import { Application } from "express-ws";
-import { createUser, findUserByEmail } from "../repositories/userRepository";
+import { createUser } from "../repositories/userRepository";
 
 export function postRegister(app: Application) {
     app.post('/register', bodyParser.urlencoded(),
         async (req, res) => {
             const { email, name } = req.body;
-            if (!email || name) {
+            if (!email || !name) {
                 res.status(400).send('Bad Request')
                 return
             }
