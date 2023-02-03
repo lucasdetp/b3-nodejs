@@ -36,11 +36,11 @@ function connect() {
 
   ws.onmessage = (event) => {
     console.log('Message from server', event.data);
-    const {type, data} = JSON.parse(event.data);
+    const { type, data } = JSON.parse(event.data);
     console.log(data)
     if (type === 'reply') {
       addMessage(
-        data.user.name,
+        data.user.name + ' : ',
         data.msg
       );
     }
