@@ -1,4 +1,5 @@
-import { prisma } from "./prisma";
+import { prisma } from './prisma';
+
 
 export function findUserByEmail(email: string) {
     return prisma.user.findUnique({
@@ -49,4 +50,32 @@ export function deleteUser(id: string) {
             id
         }
     })
+}
+
+export function createPost(content: string, userId: string) {
+    return prisma.post.create({
+        data: {
+            content,
+            userId,
+        },
+    });
+}
+
+export function findPosts() {
+
+    return prisma.post.findMany({
+        orderBy: {
+            createdAt: "desc",
+        },
+    });
+}
+
+export function createPostImage(image: string, userId: string) {
+    return prisma.post.create({
+        data: {
+            content: "",
+            image,
+            userId,
+        },
+    });
 }

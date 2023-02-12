@@ -13,7 +13,7 @@ export function postDelete(app: Application) {
             }
 
             await deleteUser(id)
-            res.send('User deleted')
+            res.redirect('/login');
 
         })
 }

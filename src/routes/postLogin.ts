@@ -19,7 +19,7 @@ export function postLogin(app: Application) {
           user.id,
           { signed: true, httpOnly: true, sameSite: true }
         );
-        res.redirect('/')
+        res.redirect('/home')
       }
       catch (e) {
         console.error(e)

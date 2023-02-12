@@ -18,6 +18,6 @@ export function postRegister(app: Application) {
             res.cookie('ssid', user.id, {
                 signed: true, httpOnly: true, sameSite: true
             });
-            res.redirect('/');
+            res.redirect('/chat');
         })
 }

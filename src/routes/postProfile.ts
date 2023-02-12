@@ -16,6 +16,6 @@ export function postProfile(app: Application) {
 
             const user = await updateUser(id, email, name)
             res.cookie('ssid', user.id, { signed: true, httpOnly: true, sameSite: true });
-            res.redirect('/');
+            res.redirect('/chat');
         })
 }

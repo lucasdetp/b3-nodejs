@@ -1,6 +1,5 @@
 import expressWs, { Application } from "express-ws";
 import express, { NextFunction, Response, Request } from "express";
-import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import path from 'path'
 import { getLogin } from "./routes/getLogin";
@@ -13,6 +12,11 @@ import { postRegister } from "./routes/postRegister";
 import { getProfile } from "./routes/getProfile";
 import { postProfile } from "./routes/postProfile";
 import { postDelete } from "./routes/postDelete";
+import { getLogout } from "./routes/getLogout";
+import { getChat } from "./routes/getChat";
+import { getHome } from "./routes/getHome";
+import { getPosts } from "./routes/getPost";
+
 
 const SECRET_KEY = 'MySecretKeyIsAwesome'
 
@@ -43,7 +47,10 @@ function main() {
 
   getRoot(app)
   getWs(app, sockets)
-
+  getLogout(app)
+  getChat(app)
+  getPosts(app, sockets)
+  getHome(app)
   app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
     console.error(error)
     res.status(500).send('Internal Server Eroor')

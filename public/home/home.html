@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome</title>
+</head>
+
+<body class="d-flex justify-content-center">
+    <div class="card w-50" style="margin-top: 50px;">
+        <div class="card-header">
+            <a href="/logout" class="btn btn-danger float-right">Logout</a>
+            <a href="/profile" class="btn btn-info">Profile</a>
+            <a href="/chat" class="btn btn-info">Chat</a>
+        </div>
+        <div class="card-body">
+            <form method="POST" class="form-group">
+                <textarea id="post-area" class="form-control"></textarea>
+                <input type="file" id="my-files" class="form-control-file mt-3" />
+                <div class="d-flex justify-content-center mt-3">
+                    <input type="submit" value="Post" class="btn btn-primary"
+                        style="background-color: #5cb85c; border: none;">
+                </div>
+            </form>
+            <div id="list"></div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
